@@ -21,7 +21,16 @@ App.config(function ($routeProvider) {
 
 App.controller('IndexController', function ($scope) {
     $scope.test = "Test";
+
+
+
 });
+
+function SetActiveNavItem(sender) {
+    $(".NavActive").removeClass("NavActive");
+    $(sender).closest("a").addClass("NavActive");
+}
+
 
 // create the controller and inject Angular's $scope
 App.controller('WorldMapController', function ($scope) {

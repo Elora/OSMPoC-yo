@@ -7,8 +7,8 @@
     <script src="/Controllers/IndexController.js"></script>
     <link rel="stylesheet" type="text/css" href="/Content/MainStyleSheet.css">
 
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.min.js"></script>
 
@@ -21,15 +21,20 @@
 
             <div id="Container">
 
-                <div id="MenuContent">
+
+                <div class="nav">
                     <ul>
-                        <li class="active"><a href="#/">Wereld map</a></li>
-                        <li><a href="#FriendList">Friendelijst</a></li>
-                        <li><a href="#Achievements">Achievements</a></li>
+                        <li><a onclick="SetActiveNavItem(this)" class="NavActive" href="#/" >Wereld map</a></li>
+                        <li><a onclick="SetActiveNavItem(this)" href="#/FriendList" >Friendelijst</a></li>
+                        <li><a onclick="SetActiveNavItem(this)" href="#/Achievements">Achievements</a></li>
                     </ul>
                 </div>
-                <!-- this is where content will be injected -->
+
+                
                 <div ng-view></div>
+
+
+
             </div>
 
 
