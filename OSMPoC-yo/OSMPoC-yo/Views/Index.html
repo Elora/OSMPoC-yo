@@ -15,28 +15,29 @@
 
 </head>
 <body>
-    <div ng-app="OSMapp">
+    <img id="bg" src="//cdn.onlinesoccermanager.nl/Content/Images/Structure/Skin/Standard/background.jpg?v=3"/>
+    
+
+
+    <div id="Container" ng-app="OSMapp">
         <div ng-controller='IndexController'>
 
 
-            <div id="Container">
 
-
-                <div class="nav">
-                    <ul>
-                        <li><a onclick="SetActiveNavItem(this)" class="NavActive" href="#/" >Wereld map</a></li>
-                        <li><a onclick="SetActiveNavItem(this)" href="#/FriendList" >Friendelijst</a></li>
-                        <li><a onclick="SetActiveNavItem(this)" href="#/Achievements">Achievements</a></li>
-                    </ul>
-                </div>
-
-                
-                <div ng-view></div>
-
-
-
+            <div class="nav">
+                <ul>
+                    <li><a onclick="SetActiveNavItem(this)" class="NavActive" href="#/">Wereld map</a></li>
+                    <li><a onclick="SetActiveNavItem(this)" href="#/FriendList">Friendelijst</a></li>
+                    <li><a onclick="SetActiveNavItem(this)" href="#/Achievements">Achievements</a></li>
+                </ul>
             </div>
 
+            <div id="Content">
+
+
+                <div ng-view></div>
+
+            </div>
 
         </div>
     </div>

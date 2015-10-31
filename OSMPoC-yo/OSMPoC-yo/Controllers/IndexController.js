@@ -21,9 +21,6 @@ App.config(function ($routeProvider) {
 
 App.controller('IndexController', function ($scope) {
     $scope.test = "Test";
-
-
-
 });
 
 function SetActiveNavItem(sender) {
