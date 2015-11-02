@@ -111,3 +111,54 @@ html, body {
         margin-top: 15px;
     }
 }
+
+
+@media screen and (min-width:1680px) {
+    img#bg {
+        background-size: cover auto;
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    img#bg {
+        margin-left: -128px;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    img#bg {
+        margin-left: -256px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    img#bg {
+        margin-left: -300px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    img#bg {
+        margin-left: -510px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    img#bg {
+        background-size: cover auto;
+        width: 160%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-left: -30%;
+        min-width: 320px;
+    }
+}

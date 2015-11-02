@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\MainStyleSheet.css" />
+    <Content Include="Controllers\FriendListController.js" />
     <Content Include="Controllers\IndexController.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">

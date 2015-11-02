@@ -1,7 +1,5 @@
-﻿// create the module and name it
-var App = angular.module('OSMapp', ['ngRoute']);
+﻿var App = angular.module('OSMapp', ['ngRoute']);
 
-// routes
 App.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -28,16 +26,3 @@ function SetActiveNavItem(sender) {
     $(sender).closest("a").addClass("NavActive");
 }
 
-
-// create the controller and inject Angular's $scope
-App.controller('WorldMapController', function ($scope) {
-    $scope.info = 'Wereld map';
-});
-
-App.controller('FriendListController', function ($scope) {
-    $scope.info = 'vriendjes';
-});
-
-App.controller('AchievementsOverviewController', function ($scope) {
-    $scope.info = 'Troep die je gehaald hebt';
-});
