@@ -6,7 +6,31 @@
     <div class="WidgetBody">
         
         
-        <p>{{ info }}</p>
+        <table>
+            <tr class="tableTopHeader">
+                <td>Naam:</td>
+                <td>Managerpunten:</td>
+            </tr>
+            <tr ng-repeat="F in Friends">
+                <td ng-if="$odd" style="background-color:#f1f1f1">
+                    {{ F.name }}
+                </td>
+                <td ng-if="$even">
+                    {{ F.name }}
+                </td>
+                <td ng-if="$odd" style="background-color:#f1f1f1">
+                    {{ F.mnpt }}
+                </td>
+                <td ng-if="$even">
+                    {{ F.mnpt }}
+                </td>
+
+            </tr>
+           
+        </table>
+
+
+
     
     
     </div>
