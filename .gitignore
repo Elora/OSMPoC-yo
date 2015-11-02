@@ -243,3 +243,7 @@ Temporary Items
 *.suo
 *.cache
 *.config
+*.suo
+OSMPoC-yo/.vs/config/applicationhost.config
+*.suo
+OSMPoC-yo/.vs/OSMPoC-yo/v14/.suo
