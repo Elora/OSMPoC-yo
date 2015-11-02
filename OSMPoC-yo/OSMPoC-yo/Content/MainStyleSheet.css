@@ -40,10 +40,10 @@ html, body {
     margin-top: 65px;
     margin-left: 15px;
     display: inline;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     padding-bottom: 45px;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px;
+    padding-right: 10px;*/
     background-color: #FFF;
 }
 
@@ -161,4 +161,21 @@ html, body {
         margin-left: -30%;
         min-width: 320px;
     }
+}
+
+
+
+
+/*..*/
+#FriendlistWidget .Title,
+#AchievementsWidget .Title{
+    color: #ff0;
+    text-shadow: 1px 1px 1px #00529c;
+    background-color: #0084cc;
+    padding: 5px;
+}
+
+#FriendlistWidget .WidgetBody,
+#AchievementsWidget .WidgetBody{
+    padding: 5px;
 }
