@@ -67,8 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\MainStyleSheet.css" />
+    <Content Include="Content\Worldmap-blank.svg" />
+    <Content Include="Controllers\AchievementsOverviewController.js" />
     <Content Include="Controllers\FriendListController.js" />
     <Content Include="Controllers\IndexController.js" />
+    <Content Include="Controllers\WorldMapController.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
