@@ -1,6 +1,28 @@
-﻿var app = angular.module('OSMapp', []);
+﻿var App = angular.module('OSMapp', ['ngRoute']);
 
-app.controller('MainController', function ($scope) {
-    $scope.test = "doei";
-
+App.config(function ($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl: 'MapPartial.html',
+            controller: 'WorldMapController'
+        })
+        .when('/FriendList', {
+            templateUrl: 'FriendListPartial.html',
+            controller: 'FriendListController'
+        })
+        .when('/Achievements', {
+            templateUrl: 'AchievementsPartial.html',
+            controller: 'AchievementsOverviewController'
+        });
 });
+
+
+App.controller('IndexController', function ($scope) {
+    $scope.test = "Test";
+});
+
+function SetActiveNavItem(sender) {
+    $(".NavActive").removeClass("NavActive");
+    $(sender).closest("a").addClass("NavActive");
+}
+
