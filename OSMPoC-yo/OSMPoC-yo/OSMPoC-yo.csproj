@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="Content\MainStyleSheet.css" />
     <Content Include="Content\Worldmap-blank.svg" />
+    <Content Include="Content\World_Map.svg" />
     <Content Include="Controllers\AchievementsOverviewController.js" />
     <Content Include="Controllers\FriendListController.js" />
     <Content Include="Controllers\IndexController.js" />
