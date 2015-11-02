@@ -193,7 +193,7 @@ html, body {
 
 svg path {
     stroke-width: 2;
-    stroke: #fff;
+    stroke: #888888;
 
     -webkit-transition: stroke 0.5s, stroke-width 0.5s;
     -o-transition: stroke 0.5s, stroke-width 0.5s;
