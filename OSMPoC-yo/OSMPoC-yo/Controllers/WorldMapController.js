@@ -20,6 +20,8 @@
        { Cid: 5, CName: 'USA', A1: 1, A2: 1, A3: 0 },
        { Cid: 6, CName: 'China', A1: 0, A2: 1, A3: 0 },
     ];
+    SetPublicCountryperson($scope.CountryPerson);
+
 
 }]);
 
@@ -38,7 +40,7 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
                 //
                 
                 var elementId = regionElement.attr("id");
-                // console.log(regionElement.attr("id"));
+               // console.log(regionElement.attr("id"));
                 templist[tempi] = regionElement.attr("id");
                 tempi++;
                 for (var i = 0; i < scope.CountryPerson.length; i++) {
@@ -79,14 +81,14 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     }
 }]);
 
-angular.module('OSMapp').directive('region', ['$compile', function ($compile) {
+angular.module('OSMapp').directive('region', [ '$compile', function ( $compile) {
     return {
         restrict: 'A',
         scope: true,
         link: function (scope, element, attrs) {
             scope.elementId = element.attr("id");
             scope.regionClick = function () {
-                alert(scope.elementId);
+                alert("Dit is: " + scope.elementId + " en je hebt hier de volgende achievements behaald: " + AchievementsInCountry(scope.elementId));
             };
             element.attr("ng-click", "regionClick()");
             element.removeAttr("region");
