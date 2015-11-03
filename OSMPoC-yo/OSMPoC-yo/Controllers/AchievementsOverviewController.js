@@ -34,7 +34,7 @@
                 var tempa2 = "";
                 var tempa3 = "";
                 if ($scope.CountryList[i] == $scope.CountryPerson[j].CName) {
-                    
+                     
                     if ($scope.CountryPerson[j].A1 == 1) {
                         tempa1 = 'Ja';
                     } else {
