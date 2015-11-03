@@ -5,25 +5,32 @@
 
     <p>{{ info }}</p>
 
-    {{CountryList}}
 
     <table>
         <tr class="tableTopHeader">
-            <td>Naam:</td>
-            <td>Managerpunten:</td>
+            <td>Land:</td>
+            <td>Achievement 1:</td>
+            <td>Achievement 2:</td>
+            <td>Achievement 3:</td>
         </tr>
-        <tr ng-repeat="F in Friends">
-            <td ng-if="$odd" style="background-color:#f1f1f1">
-                {{ F.name }}
+        <tr class="tableTopHeader">
+            <td></td>
+            <td><img src="/Content/a1.jpg"/></td>
+            <td><img src="/Content/a2.jpg" /></td>
+            <td><img src="/Content/a3.jpg" /></td>
+        </tr>
+        <tr ng-repeat="C in GetAchievements()">
+            <td>
+                {{C.Country}}            
             </td>
-            <td ng-if="$even">
-                {{ F.name }}
+            <td>
+                {{C.A1}}
             </td>
-            <td ng-if="$odd" style="background-color:#f1f1f1">
-                {{ F.mnpt }}
+            <td>                
+                {{C.A2}}
             </td>
-            <td ng-if="$even">
-                {{ F.mnpt }}
+            <td>                
+                {{C.A3}}
             </td>
 
         </tr>

@@ -210,6 +210,25 @@ html, body {
     font-weight: bold;
 }
 
+#AchievementsWidget tabel,
+#AchievementsWidget td{
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+  min-width: 200px;
+
+}
+
+#AchievementsWidget table img{
+    max-height:100px;
+    max-width:100px;
+}
+
+#AchievementsWidget .tableTopHeader{
+    font-weight: bold;
+}
+
+
 /* world map */
 
 svg path {
