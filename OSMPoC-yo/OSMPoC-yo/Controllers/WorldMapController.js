@@ -1,7 +1,14 @@
 ﻿angular.module('OSMapp').controller('WorldMapController', ['$scope', '$http', function ($scope, $http) {
+
+   
     $scope.info = 'Wereld map';
 
     $scope.dummyData = [];
+
+    //$scope.test = function()
+    //{
+    //}
+    
 
     //a 0=no and 1 = yes
     //get all countries and achievements where player id = 10  (that is Henk)
@@ -14,9 +21,13 @@
        { Cid: 6, CName: 'China', A1: 0, A2: 1, A3: 0 },
     ];
     SetPublicCountryperson($scope.CountryPerson);
-    
+
 
 }]);
+
+function test() {
+    console.log("blij");
+}
 
 var PublicCountryPerson;
 
@@ -56,6 +67,7 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
         restrict: 'A',
         templateUrl: '/Content/World_Map.svg',
         link: function (scope, element, attrs) {
+            var templist = [];
             var regions = element[0].querySelectorAll('path');
             angular.forEach(regions, function (path, key) {
                 var regionElement = angular.element(path);
@@ -95,6 +107,10 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
                 //
                 $compile(regionElement)(scope);
             })
+
+
+            test();
+
         }
     }
 }]);

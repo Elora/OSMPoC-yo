@@ -201,6 +201,7 @@ svg path {
 }
 svg path:hover , path.active {
     cursor: pointer;
-    stroke-width: 4;
+    stroke-width: 3;
     stroke: #000;
 }
+	
