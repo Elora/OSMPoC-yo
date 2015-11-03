@@ -13,8 +13,43 @@
        { Cid: 5, CName: 'USA', A1: 1, A2: 1, A3: 0 },
        { Cid: 6, CName: 'China', A1: 0, A2: 1, A3: 0 },
     ];
+    SetPublicCountryperson($scope.CountryPerson);
+    
 
 }]);
+
+var PublicCountryPerson;
+
+function GetPublicCountryPerson() {
+
+    return PublicCountryPerson;
+}
+
+function SetPublicCountryperson(countryperson) {
+
+    PublicCountryPerson = countryperson;
+}
+
+function AchievementsInCountry(countryname) {
+    var answer = "";
+    var countryperson = GetPublicCountryPerson();
+    for (var i = 0; i < countryperson.length; i++) {
+        if (countryname == countryperson[i].CName) {
+            if (countryperson[i].A1 == 1) {
+                answer = answer + "Kampioenschap ";
+            }
+            if (countryperson[i].A2 == 1) {
+                answer = answer + "Doelstelling ";
+            }
+            if (countryperson[i].A3 == 1) {
+                answer = answer + "Bekerwinst ";
+            }
+        }
+
+    }
+
+    return answer;
+}
 
 angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     return {
@@ -64,14 +99,14 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     }
 }]);
 
-angular.module('OSMapp').directive('region', ['$compile', function ($compile) {
+angular.module('OSMapp').directive('region', [ '$compile', function ( $compile) {
     return {
         restrict: 'A',
         scope: true,
         link: function (scope, element, attrs) {
             scope.elementId = element.attr("id");
             scope.regionClick = function () {
-                alert(scope.elementId);
+                alert("Dit is: " + scope.elementId + " en je hebt hier de volgende achievements behaald: " + AchievementsInCountry(scope.elementId));
             };
             element.attr("ng-click", "regionClick()");
             element.removeAttr("region");
