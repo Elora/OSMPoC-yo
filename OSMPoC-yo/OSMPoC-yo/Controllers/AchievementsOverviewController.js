@@ -28,7 +28,8 @@
     $scope.CountryAchievementList2 = null;
     $scope.GetAchievements = function () {
         if ($scope.CountryAchievementList2 == null) {
-            $scope.CountryAchievementList2 =  tesjte($scope.CountryPerson);
+            $scope.CountryAchievementList2 = tesjte($scope.CountryPerson);
+
             return $scope.CountryAchievementList2;
         }
         return $scope.CountryAchievementList2;
@@ -45,38 +46,38 @@ var CountryAchievementList = [];
 
 
 function tesjte(CountryPerson) {
-    for (var j = 0; j < CountryPerson.length; j++) {
-        for (var i = 0 ; i < CountryList.length; i++) {
-            var tempa1 = "";
-            var tempa2 = "";
-            var tempa3 = "";
+    var k = 0;
+    
+    for (var i = 0 ; i < CountryList.length; i++) {
+        var tempa1 = "Nee";
+        var tempa2 = "Nee";
+        var tempa3 = "Nee";
+        for (var j = 0; j < CountryPerson.length; j++) {          
             if (CountryList[i] == CountryPerson[j].CName) {
-                
                 if (CountryPerson[j].A1 == 1) {
-                    tempa1 = 'Ja';
-                } else {
-                    tempa1 = 'Nee';
-
+                    tempa1 = "Ja";
                 }
+                //else {
+                //    tempa1 = "Nee";
+                //}
                 if (CountryPerson[j].A2 == 1) {
-                    tempa2 = 'Ja';
-                } else {
-                    tempa2 = 'Nee';
+                    tempa2 = "Ja";
                 }
+                //else {
+                //    tempa2 = "Nee";
+                //}
                 if (CountryPerson[j].A3 == 1) {
-                    tempa3 = 'Ja';
-                } else {
-                    tempa3 = 'Nee';
+                    tempa3 = "Ja";
                 }
-
-                
-                CountryAchievementList[i] = { Country: CountryList[i], A1: tempa1, A2: tempa2, A3: tempa3 }
-
-            }
-            else {
-                CountryAchievementList[i] = { Country: CountryList[i], A1: "nee", A2: 'nee', A3: "nee" }
+                //else {
+                //    tempa3 = "Nee";
+                //}
             }
         }
+        console.log(tempa1);
+        CountryAchievementList[k] = { Country: CountryList[i], A1: tempa1, A2: tempa2, A3: tempa3 };
+        k++;
+        
     }
     return CountryAchievementList;
 
