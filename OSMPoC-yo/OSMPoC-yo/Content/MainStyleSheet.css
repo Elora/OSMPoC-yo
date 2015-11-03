@@ -36,7 +36,7 @@ html, body {
 
 #Content {
     float: left;
-    width: 785px;
+    min-width: 785px;
     margin-top: 65px;
     margin-left: 15px;
     display: inline;
@@ -50,12 +50,14 @@ html, body {
 
 
 /*navigation menu*/
+
 .nav {
     float: left;
     margin-left: 15px;
     margin-top: 15px;
-    width: 785px;
     max-height: 74px;
+    
+    min-width: 785px;
 }
 
     .nav ul {
@@ -92,6 +94,25 @@ html, body {
             color: #444;
             cursor: default;
         }
+
+        
+@media (min-width: 1200px) {
+    .nav {
+        width: 1170px;
+    }
+}
+@media (min-width: 992px) {
+    .nav {
+        width: 970px;
+    }
+}
+@media (min-width: 768px) {
+    .nav {
+        width: 750px;
+    }
+}
+
+
 
 @media screen and (min-width: 600px) {
     .nav li {

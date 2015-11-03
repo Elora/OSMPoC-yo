@@ -23,16 +23,13 @@
 
 }]);
 
-function test() {
-    console.log("blij");
-}
-
 angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
         templateUrl: '/Content/World_Map.svg',
         link: function (scope, element, attrs) {
             var templist = [];
+            var tempi = 0;
             var regions = element[0].querySelectorAll('path');
             angular.forEach(regions, function (path, key) {
                 var regionElement = angular.element(path);
@@ -41,8 +38,11 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
                 //
                 
                 var elementId = regionElement.attr("id");
-               // console.log(regionElement.attr("id"));
+                // console.log(regionElement.attr("id"));
+                templist[tempi] = regionElement.attr("id");
+                tempi++;
                 for (var i = 0; i < scope.CountryPerson.length; i++) {
+                   
                     if (elementId == scope.CountryPerson[i].CName) {
                         var color = 0;
 
@@ -74,8 +74,7 @@ angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
             })
 
 
-            test();
-
+            SetCountryList(templist);
         }
     }
 }]);
@@ -95,3 +94,15 @@ angular.module('OSMapp').directive('region', ['$compile', function ($compile) {
         }
     }
 }]);
+
+
+
+var CountryList;
+
+function SetCountryList(List) {
+    CountryList = List;
+}
+
+function GetCountryList() {
+    return CountryList;
+}

@@ -18,8 +18,7 @@
        { Cid: 4, CName:'be' , A1: 1, A2: 1, A3: 0 },
     ];
 
-
+    $scope.CountryList = GetCountryList();
     
-
 
 }]);
