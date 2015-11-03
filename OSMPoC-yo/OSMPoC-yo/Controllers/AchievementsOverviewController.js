@@ -21,69 +21,63 @@
 
     ];
 
+
     $scope.CountryList = GetCountryList();
-    
     $scope.CountryPersonActive = "";
 
-    $scope.CountryAchievementList = [];
-
+    $scope.CountryAchievementList2 = null;
     $scope.GetAchievements = function () {
-        for (var i = 0 ; i < $scope.CountryList.length; i++) {
-            for (var j = 0; j < $scope.CountryPerson.length; j++) {
-                var tempa1 = "";
-                var tempa2 = "";
-                var tempa3 = "";
-                if ($scope.CountryList[i] == $scope.CountryPerson[j].CName) {
-                     
-                    if ($scope.CountryPerson[j].A1 == 1) {
-                        tempa1 = 'Ja';
-                    } else {
-                        tempa1 = 'Nee';
-                    }
-                    if ($scope.CountryPerson[j].A2 == 1) {
-                        tempa2 = 'Ja';
-                    } else {
-                        tempa2 = 'Nee';
-                    }
-                    if ($scope.CountryPerson[j].A3 == 1 ) {
-                        tempa3 = 'Ja';
-                    } else {
-                        tempa3 = 'Nee';
-                    }
-                    
-                    $scope.CountryAchievementList[i] = {Country: $scope.CountryList[i], A1: tempa1 , A2: tempa2, A3: tempa3}
-
-                }
-                else {
-                    $scope.CountryAchievementList[i] = { Country: $scope.CountryList[i], A1: "Nee", A2: 'Nee', A3: "Nee" }
-                }
-            }
+        if ($scope.CountryAchievementList2 == null) {
+            $scope.CountryAchievementList2 =  tesjte($scope.CountryPerson);
+            return $scope.CountryAchievementList2;
         }
-        return $scope.CountryAchievementList;
+        return $scope.CountryAchievementList2;
+
     }
 
-    $scope.getachievementa1 = function () {
-        if ($scope.IsCountyAMatch()) {
-            //a 0=no and 1 = yes
-            console.log("get a1 match")
-            if ($scope.CountryPersonActive.A1 == 1) {
-                return 'Ja';
-            }
-            else {
-                return 'nee';
-            }
-        }
-        return 'Nee';
-    }
-
-
-    $scope.getachievementa2 = function () {
-        return 'ja';
-    }
-
-
-    $scope.getachievementa3 = function () {
-        return 'ja';
-    }
 
 }]);
+
+var CountryList = GetCountryList();
+var CountryAchievementList = [];
+
+
+
+
+function tesjte(CountryPerson) {
+    for (var j = 0; j < CountryPerson.length; j++) {
+        for (var i = 0 ; i < CountryList.length; i++) {
+            var tempa1 = "";
+            var tempa2 = "";
+            var tempa3 = "";
+            if (CountryList[i] == CountryPerson[j].CName) {
+                
+                if (CountryPerson[j].A1 == 1) {
+                    tempa1 = 'Ja';
+                } else {
+                    tempa1 = 'Nee';
+
+                }
+                if (CountryPerson[j].A2 == 1) {
+                    tempa2 = 'Ja';
+                } else {
+                    tempa2 = 'Nee';
+                }
+                if (CountryPerson[j].A3 == 1) {
+                    tempa3 = 'Ja';
+                } else {
+                    tempa3 = 'Nee';
+                }
+
+                
+                CountryAchievementList[i] = { Country: CountryList[i], A1: tempa1, A2: tempa2, A3: tempa3 }
+
+            }
+            else {
+                CountryAchievementList[i] = { Country: CountryList[i], A1: "nee", A2: 'nee', A3: "nee" }
+            }
+        }
+    }
+    return CountryAchievementList;
+
+}
