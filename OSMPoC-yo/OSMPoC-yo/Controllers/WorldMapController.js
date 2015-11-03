@@ -8,7 +8,7 @@
 angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
-        templateUrl: '/Content/Worldmap-blank.svg',
+        templateUrl: '/Content/World_Map.svg',
         link: function (scope, element, attrs) {
             var regions = element[0].querySelectorAll('path');
             angular.forEach(regions, function (path, key) {
