@@ -66,6 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\a1.jpg" />
+    <Content Include="Content\a2.jpg" />
+    <Content Include="Content\a3.jpg" />
     <Content Include="Content\MainStyleSheet.css" />
     <Content Include="Content\Worldmap-blank.svg" />
     <Content Include="Content\World_Map.svg" />

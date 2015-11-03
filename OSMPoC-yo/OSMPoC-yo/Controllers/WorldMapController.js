@@ -1,21 +1,38 @@
 ﻿angular.module('OSMapp').controller('WorldMapController', ['$scope', '$http', function ($scope, $http) {
+
+   
     $scope.info = 'Wereld map';
 
     $scope.dummyData = [];
 
+    //$scope.test = function()
+    //{
+    //}
+    
+
+
 }]);
+
+function test() {
+    console.log("blij");
+}
 
 angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
         templateUrl: '/Content/World_Map.svg',
         link: function (scope, element, attrs) {
+            var templist = [];
             var regions = element[0].querySelectorAll('path');
             angular.forEach(regions, function (path, key) {
                 var regionElement = angular.element(path);
                 regionElement.attr("region", "");
                 $compile(regionElement)(scope);
             })
+
+
+            test();
+
         }
     }
 }]);
