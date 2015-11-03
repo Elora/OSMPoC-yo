@@ -57,21 +57,12 @@ function tesjte(CountryPerson) {
                 if (CountryPerson[j].A1 == 1) {
                     tempa1 = "Ja";
                 }
-                //else {
-                //    tempa1 = "Nee";
-                //}
                 if (CountryPerson[j].A2 == 1) {
                     tempa2 = "Ja";
                 }
-                //else {
-                //    tempa2 = "Nee";
-                //}
                 if (CountryPerson[j].A3 == 1) {
                     tempa3 = "Ja";
                 }
-                //else {
-                //    tempa3 = "Nee";
-                //}
             }
         }
         console.log(tempa1);

@@ -88,6 +88,13 @@ html, body {
         .nav a:hover {
             background-color: rgba(3, 81, 132, 0.7);
         }
+        .nav a:link,
+        .nav a:visited ,
+        .nav a:active ,
+        .nav a:hover{
+            text-decoration: none;           
+            color: white;
+        }
 
         .nav a.NavActive {
             background-color: #fff;
@@ -186,7 +193,8 @@ html, body {
 
 /*..*/
 #FriendlistWidget .Title,
-#AchievementsWidget .Title{
+#AchievementsWidget .Title,
+#WorldMapWidget .Title{
     color: #ff0;
     text-shadow: 1px 1px 1px #00529c;
     background-color: #0084cc;
