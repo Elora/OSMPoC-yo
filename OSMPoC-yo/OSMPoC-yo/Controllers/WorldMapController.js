@@ -25,6 +25,40 @@
 
 }]);
 
+var PublicCountryPerson;
+
+function GetPublicCountryPerson() {
+    
+        return PublicCountryPerson;
+    }
+
+function SetPublicCountryperson(countryperson) {
+    
+        PublicCountryPerson = countryperson;
+    }
+
+function AchievementsInCountry(countryname) {
+        var answer = "";
+        var countryperson = GetPublicCountryPerson();
+        for (var i = 0; i < countryperson.length; i++) {
+                if (countryname == countryperson[i].CName) {
+                        if (countryperson[i].A1 == 1) {
+                                answer = answer + "Kampioenschap ";
+                            }
+                        if (countryperson[i].A2 == 1) {
+                                answer = answer + "Doelstelling ";
+                            }
+                        if (countryperson[i].A3 == 1) {
+                                answer = answer + "Bekerwinst ";
+                            }
+                    }
+        
+            }
+    
+        return answer;
+    }
+
+
 angular.module('OSMapp').directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
